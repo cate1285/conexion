@@ -10,7 +10,7 @@ SCOPES= ['https://www.googleapis.com/auth/drive']
 service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 
 folder_id='1ihMtJ54CW8jUuEWhihNN5uHBWer-9I8Z'
-file_names = ['Datos_drive.xlsx']
+file_names = ['Dataframe2.xlsx']
 mime_types = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']
 
 for file_name, mime_type in zip(file_names, mime_types):
@@ -19,7 +19,7 @@ for file_name, mime_type in zip(file_names, mime_types):
          'parents': [folder_id]
     }
 
-    media = MediaFileUpload('./conexion/{0}'.format(file_name), mimetype = mime_type)
+    media = MediaFileUpload('{0}'.format(file_name), mimetype = mime_type)
 
     service.files().create(
         body = file_metadata,
