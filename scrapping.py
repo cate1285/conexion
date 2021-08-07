@@ -40,6 +40,6 @@ data = listar
 # Create the pandas DataFrame
 df = pd.DataFrame(data, columns = ["Department","Confirmed cases","Confirmed deaths","Recovered","Active cases"])
   
-# print dataframe.
+#print(df)
 df
-df.to_excel(r'Dataframe2.xlsx')
+df.to_excel(r'Dataframe3.xlsx')
